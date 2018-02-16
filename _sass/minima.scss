@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+$table-text-align: left !default; 
+
+$base-font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color:      #2a7ae2 !default;
+
+$grey-color:       #3D4752 !default;
+$grey-color-light: #CCCED1 !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$blue-color: #00B6FF;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout"
+;
+
+$home-section-header-height: 44px;
+
+body {
+  color: $grey-color;
+  overflow-x: hidden;
+}
+
+a, a:link, a:visited {
+  color: $grey-color;
+}
+
+.wrapper {
+  margin-left: 15%;
+  margin-right: 15%;
+  max-width: none;
+}
+
+.page-content {
+  padding: 0;
+}
+
+.site-header {
+  border-top: none;
+  padding-bottom: $home-section-header-height;
+
+  .site-header-wrapper {
+    margin-right: calc(15% + 30px);
+  }
+
+  .site-header-content {
+    margin-left: 15%;
+    margin-top: 40px;
+  }
+
+  .site-header-sub {
+    color: $grey-color-light;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.site-title {
+  float: none;
+}
+
+.site-logo {
+  display: inline-block;
+  background-image: url('img/logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 250px;
+}
+
+.main-menu {
+  position: fixed;
+  top: 180px;
+  right: 0;
+  width: calc(30px + 15%);
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin: 7px 0;
+  }
+
+  &-link {
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.active {
+      font-weight: bold;
+
+      &:before {
+        content: "";
+        background: white;
+        border: 3px solid black;
+        border-radius: 50%;
+        display: inline-block;
+        float: left;
+        height: 10px;
+        margin-left: -42px;
+        margin-top: 3px;
+        width: 10px;
+      }
+    }
+  }
+
+  &.dark-background {
+    a {
+      color: white;
+    }
+  }
+}
+
+.home-section {
+  margin-top: -$home-section-header-height;
+  margin-right: calc(15% + 30px);
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  h2 {
+    color: #C8CACD;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0;
+
+    .section-header-text {
+      margin-left: 15%;
+    }
+  }
+
+  .section-header-underline {
+    width: 100vw;
+    height: 1px;
+    background: #C8CACD;
+  }
+
+  .home-section-body {
+    border-right: 8px solid;
+    min-height: 95vh;
+    padding-bottom: $home-section-header-height;
+    margin-left: 15%;
+    margin-top: -1px;
+    padding-right: 75px;
+    padding-top: 50px;
+  }
+
+  .home-section-top {
+    border-right-color: #99C457;
+    padding-top: 150px;
+  }
+
+  .home-section-projects {
+    border-right-color: #F1C618;
+  }
+
+  .home-section-who-we-are {
+    border-right-color: #FF671D;
+  }
+
+  .home-section-who-we-work-with {
+    border-right-color: #3A00E7;
+  }
+
+  .home-section-contact {
+    border-right-color: #EC5338;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+.site-footer {
+  background-color: #3D4752;
+  border-top: 0;
+  color: white;
+  height: 95vh;
+  margin-right: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+
+  .footer-wrapper {
+    margin-right: calc(15% + 30px);
+  }
+
+  .footer-content {
+    padding-top: 2 * $home-section-header-height;
+  }
+
+  a, a:link, a:visited {
+    color: $blue-color;
+  }
+}
+
+.about-bios {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .about-bio {
+    padding: 10px 0;
+  }
+
+  .about-bio-image {
+    float: left;
+    width: 25%;
+  }
+
+  .about-bio-text {
+    float: right;
+    width: 75%;
+  }
+}

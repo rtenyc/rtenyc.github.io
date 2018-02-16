@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="main-menu">
+      <ul>
+        <li>
+          <a href="#" class="main-menu-link" data-section="home">Route</a>
+        </li>
+        <li>
+          <a href="#" class="main-menu-link" data-section="projects">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="main-menu-link" data-section="about">About</a>
+        </li>
+        <li>
+          <a href="#" class="main-menu-link" data-section="clients">Clients</a>
+        </li>
+        <li>
+          <a href="#" class="main-menu-link" data-section="contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <main class="page-content" aria-label="Content">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

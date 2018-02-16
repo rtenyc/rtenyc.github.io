@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <section class="home-section" id="home">
+    <div class="home-section-body home-section-top">
+      <h2>Mapping the present with an eye to the future.</h2>
+      <div>
+        {{ site.sections | where_exp: "s", "s.name == 'home'" }}
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section" id="projects">
+    <h2>
+      <div class="section-header-text">Projects</div>
+      <div class="section-header-underline"></div>
+    </h2>
+    <div class="home-section-body home-section-projects">
+      <div>
+        {{ site.sections | where_exp: "s", "s.name == 'projects'" }}
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section" id="about">
+    <h2>
+      <div class="section-header-text">Who We Are</div>
+      <div class="section-header-underline"></div>
+    </h2>
+    <div class="home-section-body home-section-who-we-are">
+      {{ site.sections | where_exp: "s", "s.name == 'about'" }}
+
+      <ul class="about-bios">
+        {% assign bios = (site.bios | sort: 'order') %}
+        {% for bio in bios %}
+          <li class="about-bio">
+            <div class="about-bio-image">
+              <img src="{{ bio.image }}"/>
+            </div>
+            <div class="about-bio-text">
+              {{ bio.content }}
+            </div>
+            <div style="clear: both;"></div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="home-section" id="clients">
+    <h2>
+      <div class="section-header-text">Who We Work With</div>
+      <div class="section-header-underline"></div>
+    </h2>
+    <div class="home-section-body home-section-who-we-work-with">
+      {{ site.sections | where_exp: "s", "s.name == 'clients'" }}
+
+      <ul class="clients-testimonials">
+        {% assign testimonials = (site.testimonials | sort: 'order') %}
+        {% for testimonial in testimonials %}
+          <li class="clients-testimonial">
+            <div class="clients-testimonial-image">
+              <img src="{{ testimonial.image }}"/>
+            </div>
+            <div class="client-testimonial-text">
+              {{ testimonial.content }}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+</div>
