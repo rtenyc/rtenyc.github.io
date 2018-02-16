@@ -43,15 +43,16 @@ collections:
   testimonials:
     output: false
 
-metadata:
-  _testimonials:
-  - name: "name"
-    field:
-      element: "text"
-  - name: "title"
-    field:
-      element: "text"
-  - name: "order"
-    field:
-      element: "number"
-      value: 1
+prose:
+  metadata:
+    _testimonials:
+    - name: "name"
+      field:
+        element: "text"
+    - name: "title"
+      field:
+        element: "text"
+    - name: "order"
+      field:
+        element: "number"
+        value: 1
