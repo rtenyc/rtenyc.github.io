@@ -49,10 +49,13 @@ prose:
     - name: "name"
       field:
         element: "text"
+        label: "name"
     - name: "title"
       field:
         element: "text"
+        label: "title"
     - name: "order"
       field:
         element: "number"
+        label: "order"
         value: 1
