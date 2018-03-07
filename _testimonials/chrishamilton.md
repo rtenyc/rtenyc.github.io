@@ -1,6 +1,6 @@
 ---
 name: Chris Hamilton
-title: Executive Director, ACCS
+jobtitle: Executive Director, ACCS
 order: 1
 image: https://image.flaticon.com/icons/png/128/145/145866.png
 ---

@@ -17,6 +17,7 @@ $brand-color:      #2a7ae2 !default;
 
 $grey-color:       #3D4752 !default;
 $grey-color-light: #CCCED1 !default;
+$grey-color-lighter: #EEE !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
 $blue-color: #00B6FF;
@@ -253,5 +254,28 @@ a, a:link, a:visited {
   .about-bio-text {
     float: right;
     width: 75%;
+  }
+}
+
+.clients-testimonials {
+  margin: 0;
+
+  .clients-testimonial {
+    background: $grey-color-lighter;
+    list-style: none;
+    margin-top: 1rem;
+    padding: .5rem;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &-image {
+      float: left;
+    }
+
+    &-text {
+      float: left;
+    }
   }
 }

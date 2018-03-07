@@ -1,6 +1,6 @@
 ---
 name: Gabe Klein
-title: 
+jobtitle: 
 order: 2
 image: https://image.flaticon.com/icons/png/128/145/145866.png
 ---

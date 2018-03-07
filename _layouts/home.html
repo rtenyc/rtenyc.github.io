@@ -68,6 +68,10 @@ layout: default
             <div class="client-testimonial-text">
               {{ testimonial.content }}
             </div>
+            <div class="client-testimonial-text">
+              &mdash;{{ testimonial.name }}{% if testimonial.jobtitle %}, {{ testimonial.jobtitle }}{% endif %}
+            </div>
+            <div style="clear: both;"></div>
           </li>
         {% endfor %}
       </ul>

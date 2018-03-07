@@ -1,6 +1,6 @@
 ---
 name: Jessie Braden
-title: 
+jobtitle: 
 order: 3
 image: https://image.flaticon.com/icons/png/128/145/145866.png
 ---

@@ -50,10 +50,10 @@ prose:
       field:
         element: "text"
         label: "name"
-    - name: "title"
+    - name: "jobtitle"
       field:
         element: "text"
-        label: "title"
+        label: "job title"
     - name: "order"
       field:
         element: "number"
