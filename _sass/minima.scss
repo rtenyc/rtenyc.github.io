@@ -27,6 +27,12 @@ $content-width:    800px !default;
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 
+$dark-green-rail-color: #629B21;
+$yellow-rail-color: #F1C618;
+$red-rail-color: #F42503;
+$orange-rail-color: #F97F06;
+$blue-rail-color: #135BBC;
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
@@ -185,24 +191,24 @@ a, a:link, a:visited {
   }
 
   .home-section-top {
-    border-right-color: #99C457;
+    border-right-color: $dark-green-rail-color;
     padding-top: 150px;
   }
 
   .home-section-projects {
-    border-right-color: #F1C618;
+    border-right-color: $yellow-rail-color;
   }
 
   .home-section-who-we-are {
-    border-right-color: #FF671D;
+    border-right-color: $orange-rail-color;
   }
 
   .home-section-who-we-work-with {
-    border-right-color: #3A00E7;
+    border-right-color: $blue-rail-color;
   }
 
   .home-section-contact {
-    border-right-color: #EC5338;
+    border-right-color: $red-rail-color;
     padding-bottom: 0;
     padding-top: 0;
   }
