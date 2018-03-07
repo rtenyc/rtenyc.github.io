@@ -60,6 +60,14 @@ $blue-rail-color: #135BBC;
 
 $home-section-header-height: 44px;
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   color: $grey-color;
   overflow-x: hidden;
@@ -139,6 +147,7 @@ a, a:link, a:visited {
         background: white;
         border: 3px solid black;
         border-radius: 50%;
+        box-sizing: content-box;
         display: inline-block;
         float: left;
         height: 10px;
@@ -284,12 +293,13 @@ a, a:link, a:visited {
 
   .about-bio-image {
     float: left;
-    width: 25%;
+    width: 33%;
   }
 
   .about-bio-text {
     float: right;
-    width: 75%;
+    padding-left: 1rem;
+    width: 67%;
   }
 }
 

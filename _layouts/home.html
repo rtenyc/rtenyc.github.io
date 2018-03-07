@@ -38,7 +38,7 @@ layout: default
         {% for bio in bios %}
           <li class="about-bio">
             <div class="about-bio-image">
-              <img src="{{ bio.image }}"/>
+              <img src="{{ bio.image | prepend: '/assets/' | relative_url }}"/>
             </div>
             <div class="about-bio-text">
               {{ bio.content }}
