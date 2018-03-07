@@ -224,6 +224,10 @@ a, a:link, a:visited {
   padding-bottom: 0;
   padding-top: 0;
 
+  h2 {
+    color: white;
+  }
+
   .footer-wrapper {
     margin-right: calc(15% + 30px);
   }
@@ -232,8 +236,40 @@ a, a:link, a:visited {
     padding-top: 2 * $home-section-header-height;
   }
 
+  .footer-email-us-button {
+    background: $blue-color;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    padding: 10px 25px;
+    margin-top: 1rem;
+  }
+
+  .footer-email-text {
+    margin-top: .5rem;
+  }
+
+  .footer-social {
+    margin-top: 3rem;
+  }
+
+  .footer-social-list {
+    margin: 0;
+
+    li {
+      float:left;
+      list-style: none;
+      margin-left: 2rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+
   a, a:link, a:visited {
     color: $blue-color;
+    font-weight: bold;
   }
 }
 
