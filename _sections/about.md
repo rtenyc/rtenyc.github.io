@@ -2,9 +2,4 @@
 name: about
 published: true
 ---
-Route is a team of designers, developers, and cartographers who are dedicated to improving mobility. We use our combined expertise to give cities adaptable tools to set residents and visitors in motion. 
-
-Using municipal data, we build intuitive visual systems that help people understand the city and its transportation networks. Our work supports a variety of transportation options including **mass transit, bicycling,** and **alternative modes of transit.**
-
-
-
+We met through [Pratt’s Spatial Analysis and Visualization Initiative](https://commons.pratt.edu/savi/ "Pratt SAVI") in Brooklyn, NY, where we have had the opportunity to teach and learn about map-making, from data collection to web development and cartography.
