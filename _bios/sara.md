@@ -2,6 +2,7 @@
 name: Sara Eichner
 order: 3
 image: img/bios/Sara.jpg
+published: true
 ---
 
-**Sara Eichner** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec magna quis arcu gravida sagittis sed ultricies est. Maecenas eget libero sagittis, feugiat sapien quis, condimentum tellus. Quisque a mauris blandit dolor finibus auctor eu vel nulla. Nam sit amet ante at augue venenatis vehicula. Pellentesque feugiat tincidunt erat, nec pulvinar urna varius sed. Pellentesque ultrices, leo at condimentum ultrices, ante ipsum consectetur metus, eget dictum sapien lacus sed mi. Etiam nibh nibh, egestas a ipsum sed, condimentum molestie lacus. In ut eros in turpis faucibus convallis quis vitae nisi.
+**Sara Eichner** After working for many years as a graphic designer in educational publishing, Sara enrolled in Pratt’s SAVI GIS program in 2015. After completing the program she worked with the Pratt SAVI on the CreateNYC Cultural Plan for All New Yorkers. Her work uses GIS and tells stories with complex data while not losing sight of the texture and complexities of the urban geography and communities behind the data. Sara also maintains a practice as a visual artist, exhibiting in New York and around the U.S. [Visit Sara's portfolio.](https://www.saraeichnergis.com/ "Sara's Portfolio")
