@@ -1,6 +1,6 @@
 ---
 name: clients
+published: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec magna quis arcu gravida sagittis sed ultricies est. Maecenas eget libero sagittis, feugiat sapien quis, condimentum tellus. Quisque a mauris blandit dolor finibus auctor eu vel nulla. 
-
+We’ve worked with innovative organizations who are producing creative transportation solutions and tools around the country.
