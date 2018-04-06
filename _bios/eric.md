@@ -2,6 +2,8 @@
 name: Eric Brelsford
 order: 2
 image: img/bios/Eric.jpg
+published: true
 ---
 
-**Eric Brelsford** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec magna quis arcu gravida sagittis sed ultricies est. Maecenas eget libero sagittis, feugiat sapien quis, condimentum tellus. Quisque a mauris blandit dolor finibus auctor eu vel nulla. Nam sit amet ante at augue venenatis vehicula. Pellentesque feugiat tincidunt erat, nec pulvinar urna varius sed. Pellentesque ultrices, leo at condimentum ultrices, ante ipsum consectetur metus, eget dictum sapien lacus sed mi. Etiam nibh nibh, egestas a ipsum sed, condimentum molestie lacus. In ut eros in turpis faucibus convallis quis vitae nisi.
+**Eric Brelsford** is a software developer, mapmaker, and teacher with a passion for community-driven data and open source software. Eric has developed mapping platforms for a variety of organizations and uses, from mapping vacant land (Living Lots NYC) to mapping street litter (Curb Your Litter) to gathering data to support urban agriculture (Farming Concrete). Eric teaches part time at the graduate level at The New School and as part of the Spatial Analysis and Visualization Initiative at Pratt. [Visit Eric's Portfolio.](http://ebrelsford.github.io/portfolio/)
+
