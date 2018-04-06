@@ -1,5 +1,7 @@
 ---
 name: projects
+published: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis vel magna egestas imperdiet. Donec quis ultricies sem. Suspendisse potenti. Maecenas auctor elit eget metus egestas, non mollis eros rutrum. Phasellus bibendum turpis mauris, eget aliquet libero pretium et.
+Our interdisciplinary team brings together a wide range of skills including
+data analysis, visual design, user experience, cartography and software development. See some work samples below.
