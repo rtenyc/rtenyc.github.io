@@ -1,7 +1,7 @@
 ---
 name: home
+published: true
 ---
+Route is a team of designers, developers, and cartographers who are dedicated to improving mobility. We use our combined expertise to give cities adaptable tools to set residents and visitors in motion. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis vel magna egestas imperdiet. Donec quis ultricies sem. Suspendisse potenti. Maecenas auctor elit eget metus egestas, non mollis eros rutrum. Phasellus bibendum turpis mauris, eget aliquet libero pretium et. Vivamus venenatis sed magna vel imperdiet. Vestibulum vehicula consequat venenatis.
-
-Phasellus suscipit ipsum in mi mattis facilisis. Fusce sit amet felis ligula. Cras non urna in justo maximus viverra in id turpis. Quisque ut lobortis nisi. Vivamus ac ipsum quis metus condimentum placerat eu blandit quam. Sed nec eros eget diam convallis feugiat. Proin quis vulputate est, et vestibulum eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus augue eu ligula mattis luctus. In hac habitasse platea dictumst. Vivamus consequat, eros nec blandit varius, nibh justo accumsan libero, eget tempor mauris elit vitae felis. Maecenas posuere at leo ut sodales.
+Using municipal data, we build intuitive visual systems that help people understand the city and its transportation networks. Our work supports a variety of transportation options including **mass transit, bicycling, and alternative modes of transit.**
