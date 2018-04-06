@@ -7,4 +7,4 @@ published: true
 
 > Route is full of talent and delightful people. We’ve worked with the team on various projects can’t speak highly enough about their skills and professionalism. They are the perfect cross-over of data, mapping, web development and design.
 
-– **Jessie Braden**, SAVI Lab Director at Pratt Institute
+**Jessie Braden**, SAVI Lab Director at Pratt Institute
