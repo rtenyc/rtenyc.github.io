@@ -21,6 +21,43 @@ layout: default
     <div class="home-section-body home-section-projects">
       <div>
         {{ site.sections | where_exp: "s", "s.name == 'projects'" }}
+
+        <ul class="project-grid">
+          {% assign projects = (site.projects | sort: 'order') %}
+          {% assign projectslides = (site.projectslides | sort: 'order') %}
+
+          {% for project in projects %}
+            <li class="project-grid-item" style="background-image: url({{ project.image | prepend: '/assets/' | relative_url }});">
+              <div class="project-grid-item-cover">
+                <div class="project-grid-item-cover-text">{{ project.name }}</div>
+              </div>
+
+              <!-- TODO when project clicked, open up slides -->
+              <div class="project-modal-contents">
+                {% for projectslide in projectslides %}
+                  {% if projectslide.project == project.name %}
+                    <div class="project-modal-contents-slide">
+                      <div class="project-modal-contents-slide-img" style="background-image: url({{ projectslide.image | prepend: '/assets/' | relative_url }});">
+                      </div>
+                      <div class="project-modal-contents-slide-right">
+                        <div class="project-modal-contents-slide-name">{{ projectslide.name }}</div>
+                        <div class="project-modal-contents-slide-content">{{ projectslide.content }}</div>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="project-modal">
+        <div class="project-modal-background"></div>
+        <div class="project-modal-inner">
+          <div class="project-modal-close">&times;</div>
+          <button class="project-modal-previous">〈</button>
+          <button class="project-modal-next">〉</button>
+        </div>
       </div>
     </div>
   </section>

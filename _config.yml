@@ -40,6 +40,10 @@ collections:
     output: false
   bios:
     output: false
+  projects:
+    output: false
+  projectslides:
+    output: false
   testimonials:
     output: false
 

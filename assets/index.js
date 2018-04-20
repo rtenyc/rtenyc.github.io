@@ -2029,11 +2029,70 @@ function updateNavPosition() {
   (0, _d3Selection.select)('.main-menu').classed('dark-background', section === 'contact');
 }
 
+var currentSlide;
+var slideCount;
+
+function openModal(project) {
+  (0, _d3Selection.select)('body').classed('modal-open', true);
+  (0, _d3Selection.select)('.project-modal').classed('open', true).style('top', window.scrollY + 'px');
+  (0, _d3Selection.select)('.project-modal-inner').append(function () {
+    return project.select('.project-modal-contents').node().cloneNode(true);
+  });
+
+  (0, _d3Selection.selectAll)('.project-modal-inner .project-modal-contents-slide').style('display', 'none');
+
+  (0, _d3Selection.select)('.project-modal-inner .project-modal-contents-slide').style('display', 'block');
+
+  currentSlide = 0;
+  slideCount = (0, _d3Selection.selectAll)('.project-modal .project-modal-contents-slide').size();
+}
+
+function closeModal() {
+  (0, _d3Selection.select)('body').classed('modal-open', false);
+  (0, _d3Selection.select)('.project-modal').classed('open', false);
+
+  (0, _d3Selection.select)('.project-modal-inner .project-modal-contents').remove();
+}
+
+function previousProjectSlide() {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = slideCount - 1;
+  }
+  goToSlide(currentSlide);
+}
+
+function advanceProjectSlide() {
+  currentSlide = (currentSlide + 1) % slideCount;
+  goToSlide(currentSlide);
+}
+
+function goToSlide(index) {
+  var slides = (0, _d3Selection.selectAll)('.project-modal .project-modal-contents-slide');
+  slides.style('display', 'none');
+  (0, _d3Selection.select)(slides.nodes()[currentSlide]).style('display', 'block');
+}
+
 function initialize() {
   (0, _d3Selection.selectAll)('.main-menu-link').on('click', function (d, i, nodes) {
     _d3Selection.event.preventDefault();
     scrollToSection(nodes[i].dataset.section);
   });
+
+  (0, _d3Selection.selectAll)('.project-grid-item').on('click', function (d, i, nodes) {
+    _d3Selection.event.preventDefault();
+    openModal((0, _d3Selection.select)(nodes[i]));
+  });
+
+  (0, _d3Selection.select)('.project-modal-close').on('click', function () {
+    _d3Selection.event.preventDefault();
+    closeModal();
+  });
+
+  (0, _d3Selection.select)('.project-modal-background').on('click', closeModal);
+
+  (0, _d3Selection.select)('.project-modal-previous').on('click', previousProjectSlide);
+  (0, _d3Selection.select)('.project-modal-next').on('click', advanceProjectSlide);
 
   updateNavPosition();
   window.onscroll = (0, _lodash2.default)(updateNavPosition, 300);

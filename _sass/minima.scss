@@ -71,6 +71,10 @@ html {
 body {
   color: $grey-color;
   overflow-x: hidden;
+
+  &.modal-open {
+    overflow-y: hidden;
+  }
 }
 
 a, a:link, a:visited {
@@ -322,6 +326,145 @@ a, a:link, a:visited {
 
     &-text {
       float: left;
+    }
+  }
+}
+
+.project-grid {
+  margin: 0;
+  padding: 0;
+
+  &-item {
+    background: #ddd;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    float: left;
+    height: 250px;
+    margin-bottom: 3%;
+    margin-right: 3%;
+    position: relative;
+    width: 47%;
+
+    &-cover {
+      background: rgba(0, 0, 0, 0.5);
+      bottom: 0;
+      cursor: pointer;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+
+      &-text {
+        color: white;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+      }
+    }
+
+    &:hover .project-grid-item-cover {
+      display: flex;
+    }
+  }
+}
+
+.project-modal {
+  display: none;
+
+  &.open {
+    display: block;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  &-background {
+    background: rgba(0, 0, 0, 0.05);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &-close {
+    border: 1px solid gray;
+    border-radius: 50%;
+    color: gray;
+    cursor: pointer;
+    display: block;
+    font-size: 24px;
+    height: 25px;
+    line-height: 25px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 25px;
+  }
+
+  &-contents {
+    display: none;
+    height: 100%;
+    padding: 20px;
+
+    &-slide {
+      display: none;
+      height: 100%;
+
+      &-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        float: left;
+        height: 100%;
+        width: 70%;
+      }
+
+      &-right {
+        float: left;
+        padding: 15px;
+        width: 30%;
+      }
+    }
+  }
+
+  &-next,
+  &-previous {
+    background: none;
+    border: none;
+    font-size: 40px;
+    padding: 0;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+
+  &-previous {
+    left: 0;
+    top: 50%;
+  }
+
+  &-next {
+    right: 0;
+    top: 50%;
+  }
+
+  &-inner {
+    background: white;
+    box-shadow: 0px 0px 10px 1px #ccc;
+    height: 500px;
+    position: absolute;
+    top: 25%;
+    left: 90px;
+    width: 70%;
+
+    .project-modal-contents {
+      display: block;
     }
   }
 }

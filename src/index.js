@@ -41,11 +41,74 @@ function updateNavPosition() {
     .classed('dark-background', section === 'contact') ;
 }
 
+var currentSlide;
+var slideCount;
+
+function openModal(project) {
+  select('body').classed('modal-open', true);
+  select('.project-modal')
+    .classed('open', true)
+    .style('top', `${window.scrollY}px`);
+  select('.project-modal-inner')
+    .append(() => project.select('.project-modal-contents').node().cloneNode(true));
+
+  selectAll('.project-modal-inner .project-modal-contents-slide')
+    .style('display', 'none');
+
+  select('.project-modal-inner .project-modal-contents-slide')
+    .style('display', 'block');
+
+  currentSlide = 0;
+  slideCount = selectAll('.project-modal .project-modal-contents-slide').size();
+}
+
+function closeModal() {
+  select('body').classed('modal-open', false);
+  select('.project-modal')
+    .classed('open', false);
+
+  select('.project-modal-inner .project-modal-contents').remove();
+}
+
+function previousProjectSlide() {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = slideCount - 1;
+  }
+  goToSlide(currentSlide);
+}
+
+function advanceProjectSlide() {
+  currentSlide = (currentSlide + 1) % slideCount;
+  goToSlide(currentSlide);
+}
+
+function goToSlide(index) {
+  const slides = selectAll('.project-modal .project-modal-contents-slide');
+  slides.style('display', 'none');
+  select(slides.nodes()[currentSlide]).style('display', 'block');
+}
+
 function initialize() {
   selectAll('.main-menu-link').on('click', (d, i, nodes) => {
     currentEvent.preventDefault();
     scrollToSection(nodes[i].dataset.section);
   });
+
+  selectAll('.project-grid-item').on('click', (d, i, nodes) => {
+    currentEvent.preventDefault();
+    openModal(select(nodes[i]));
+  });
+
+  select('.project-modal-close').on('click', () => {
+    currentEvent.preventDefault();
+    closeModal();
+  });
+
+  select('.project-modal-background').on('click', closeModal);
+
+  select('.project-modal-previous').on('click', previousProjectSlide);
+  select('.project-modal-next').on('click', advanceProjectSlide);
 
   updateNavPosition();
   window.onscroll = throttle(updateNavPosition, 300);
