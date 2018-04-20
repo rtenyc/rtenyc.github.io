@@ -117,11 +117,29 @@ a, a:link, a:visited {
 
 .site-logo {
   display: inline-block;
-  background-image: url('img/logo.svg');
   background-repeat: no-repeat;
   background-size: contain;
   height: 50px;
   width: 250px;
+
+  &.blue {
+    background-image: url('img/logo-blue.svg');
+  }
+  &.green {
+    background-image: url('img/logo-green.svg');
+  }
+  &.grey {
+    background-image: url('img/logo-grey.svg');
+  }
+  &.orange {
+    background-image: url('img/logo-orange.svg');
+  }
+  &.red {
+    background-image: url('img/logo-red.svg');
+  }
+  &.yellow {
+    background-image: url('img/logo-yellow.svg');
+  }
 }
 
 .main-menu {

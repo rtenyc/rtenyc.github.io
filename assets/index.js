@@ -2073,7 +2073,15 @@ function goToSlide(index) {
   (0, _d3Selection.select)(slides.nodes()[currentSlide]).style('display', 'block');
 }
 
+function selectLogoColor() {
+  var colors = ['blue', 'green', 'grey', 'orange', 'red', 'yellow'];
+  var index = Math.floor(Math.random() * colors.length);
+  (0, _d3Selection.select)('.site-logo').classed(colors[index], true);
+}
+
 function initialize() {
+  selectLogoColor();
+
   (0, _d3Selection.selectAll)('.main-menu-link').on('click', function (d, i, nodes) {
     _d3Selection.event.preventDefault();
     scrollToSection(nodes[i].dataset.section);

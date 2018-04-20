@@ -89,7 +89,16 @@ function goToSlide(index) {
   select(slides.nodes()[currentSlide]).style('display', 'block');
 }
 
+function selectLogoColor() {
+  const colors = ['blue', 'green', 'grey', 'orange', 'red', 'yellow'];
+  const index = Math.floor(Math.random() * colors.length);
+  select('.site-logo')
+    .classed(colors[index], true);
+}
+
 function initialize() {
+  selectLogoColor();
+
   selectAll('.main-menu-link').on('click', (d, i, nodes) => {
     currentEvent.preventDefault();
     scrollToSection(nodes[i].dataset.section);
