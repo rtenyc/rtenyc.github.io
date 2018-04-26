@@ -2085,8 +2085,13 @@ function selectLogoColor() {
   (0, _d3Selection.select)('.site-logo').classed(colors[index], true);
 }
 
+function initializeAnimation() {
+  (0, _d3Selection.select)('.animation img').style('left', document.body.offsetWidth + 'px');
+}
+
 function initialize() {
   selectLogoColor();
+  initializeAnimation();
 
   (0, _d3Selection.selectAll)('.main-menu-link').on('click', function (d, i, nodes) {
     _d3Selection.event.preventDefault();

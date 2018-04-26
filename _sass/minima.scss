@@ -486,3 +486,14 @@ a, a:link, a:visited {
     }
   }
 }
+
+.animation {
+  img {
+    height: 45px;
+    left: -100px;
+    position: absolute;
+    transition: left 10s;
+    transition-delay: 1.5s;
+    transition-timing-function: ease-in-out;
+  }
+}

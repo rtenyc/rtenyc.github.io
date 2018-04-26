@@ -102,8 +102,14 @@ function selectLogoColor() {
     .classed(colors[index], true);
 }
 
+function initializeAnimation() {
+  select('.animation img')
+    .style('left', `${document.body.offsetWidth}px`);
+}
+
 function initialize() {
   selectLogoColor();
+  initializeAnimation();
 
   selectAll('.main-menu-link').on('click', (d, i, nodes) => {
     currentEvent.preventDefault();
