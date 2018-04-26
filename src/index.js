@@ -37,8 +37,14 @@ function updateNavPosition() {
   const section = closestSection().id;
   selectAll('.main-menu a').classed('active', false);
   select(`.main-menu-link[data-section="${section}"]`).classed('active', true);
-  select('.main-menu')
-    .classed('dark-background', section === 'contact') ;
+
+  // Update link class if it is in the footer
+  const footerTop = select('.site-footer').node().getBoundingClientRect().top;
+  selectAll('.main-menu a')
+    .classed('dark-background', (d, i, nodes) => {
+      const linkTop = select(nodes[i]).node().getBoundingClientRect().top;
+      return linkTop >= footerTop;
+    });
 }
 
 var currentSlide;

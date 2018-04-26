@@ -157,6 +157,8 @@ a, a:link, a:visited {
   }
 
   &-link {
+    transition: color .2s;
+
     &:hover {
       text-decoration: none;
     }
@@ -178,10 +180,8 @@ a, a:link, a:visited {
         width: 10px;
       }
     }
-  }
 
-  &.dark-background {
-    a {
+    &.dark-background {
       color: white;
     }
   }

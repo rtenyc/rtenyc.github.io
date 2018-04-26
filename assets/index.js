@@ -2026,7 +2026,13 @@ function updateNavPosition() {
   var section = closestSection().id;
   (0, _d3Selection.selectAll)('.main-menu a').classed('active', false);
   (0, _d3Selection.select)('.main-menu-link[data-section="' + section + '"]').classed('active', true);
-  (0, _d3Selection.select)('.main-menu').classed('dark-background', section === 'contact');
+
+  // Update link class if it is in the footer
+  var footerTop = (0, _d3Selection.select)('.site-footer').node().getBoundingClientRect().top;
+  (0, _d3Selection.selectAll)('.main-menu a').classed('dark-background', function (d, i, nodes) {
+    var linkTop = (0, _d3Selection.select)(nodes[i]).node().getBoundingClientRect().top;
+    return linkTop >= footerTop;
+  });
 }
 
 var currentSlide;
