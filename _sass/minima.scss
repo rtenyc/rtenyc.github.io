@@ -505,8 +505,9 @@ a, a:link, a:visited {
 
 .animation {
   img {
-    height: 45px;
+    height: 30px;
     left: -100px;
+    margin-top: 17px;
     position: absolute;
     transition: left 10s;
     transition-delay: 1.5s;
