@@ -110,19 +110,22 @@ a, a:link, a:visited {
     font-size: 18px;
     font-weight: 600;
     padding: 0;
+    margin-left: -80px;
   }
 }
 
 .site-title {
   float: none;
+  line-height: 35px;
 }
 
 .site-logo {
   display: inline-block;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100px;
+  height: 50px;
   width: 250px;
+  margin-left: -80px;
 
   &.blue {
     background-image: url('img/logo-blue.svg');
