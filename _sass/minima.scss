@@ -110,7 +110,7 @@ a, a:link, a:visited {
     font-size: 18px;
     font-weight: 600;
     padding: 0;
-    margin-left: -80px;
+    margin-left: -65px;
   }
 }
 
@@ -125,7 +125,7 @@ a, a:link, a:visited {
   background-size: contain;
   height: 50px;
   width: 250px;
-  margin-left: -80px;
+  margin-left: -65px;
 
   &.blue {
     background-image: url('img/logo-blue.svg');
@@ -149,7 +149,7 @@ a, a:link, a:visited {
 
 .main-menu {
   position: fixed;
-  top: 180px;
+  top: 220px;
   right: 0;
   width: calc(30px + 15%);
 
@@ -237,6 +237,11 @@ a, a:link, a:visited {
     border-right-color: $dark-green-rail-color;
     padding-top: 150px;
   }
+
+    .home-section-top p {
+    padding-top: 20px;
+    }
+
 
   .home-section-projects {
     border-right-color: $yellow-rail-color;
