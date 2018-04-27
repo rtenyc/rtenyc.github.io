@@ -6,9 +6,11 @@ layout: default
 
   <section class="home-section" id="home">
     <div class="home-section-body home-section-top">
-      <h2>Mapping the present with an eye to the future.</h2>
-      <div>
-        {{ site.sections | where_exp: "s", "s.name == 'home'" }}
+      <div class="home-section-body-inner">
+        <h2>Mapping the present with an eye to the future.</h2>
+        <div>
+          {{ site.sections | where_exp: "s", "s.name == 'home'" }}
+        </div>
       </div>
     </div>
   </section>
@@ -19,37 +21,39 @@ layout: default
       <div class="section-header-underline"></div>
     </h2>
     <div class="home-section-body home-section-projects">
-      <div>
-        {{ site.sections | where_exp: "s", "s.name == 'projects'" }}
+      <div class="home-section-body-inner">
+        <div>
+          {{ site.sections | where_exp: "s", "s.name == 'projects'" }}
 
-        <ul class="project-grid">
-          {% assign projects = (site.projects | sort: 'order') %}
-          {% assign projectslides = (site.projectslides | sort: 'order') %}
+          <ul class="project-grid">
+            {% assign projects = (site.projects | sort: 'order') %}
+            {% assign projectslides = (site.projectslides | sort: 'order') %}
 
-          {% for project in projects %}
-            <li class="project-grid-item" style="background-image: url({{ project.image | prepend: '/assets/' | relative_url }});">
-              <div class="project-grid-item-cover">
-                <div class="project-grid-item-cover-text">{{ project.name }}</div>
-              </div>
+            {% for project in projects %}
+              <li class="project-grid-item" style="background-image: url({{ project.image | prepend: '/assets/' | relative_url }});">
+                <div class="project-grid-item-cover">
+                  <div class="project-grid-item-cover-text">{{ project.name }}</div>
+                </div>
 
-              <div class="project-modal-contents">
-                {% for projectslide in projectslides %}
-                  {% if projectslide.project == project.name %}
-                    <div class="project-modal-contents-slide">
-                      <div class="project-modal-contents-slide-img" style="background-image: url({{ projectslide.image | prepend: '/assets/' | relative_url }});">
+                <div class="project-modal-contents">
+                  {% for projectslide in projectslides %}
+                    {% if projectslide.project == project.name %}
+                      <div class="project-modal-contents-slide">
+                        <div class="project-modal-contents-slide-img" style="background-image: url({{ projectslide.image | prepend: '/assets/' | relative_url }});">
+                        </div>
+                        <div class="project-modal-contents-slide-right">
+                          <div class="project-modal-contents-slide-name">{{ projectslide.name }}</div>
+                          <div class="project-modal-contents-slide-content">{{ projectslide.content }}</div>
+                        </div>
                       </div>
-                      <div class="project-modal-contents-slide-right">
-                        <div class="project-modal-contents-slide-name">{{ projectslide.name }}</div>
-                        <div class="project-modal-contents-slide-content">{{ projectslide.content }}</div>
-                      </div>
-                    </div>
-                  {% endif %}
-                {% endfor %}
-              </div>
-            </li>
-          {% endfor %}
-        </ul>
-        <div style="clear: both;"></div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+          <div style="clear: both;"></div>
+        </div>
       </div>
       <div class="project-modal">
         <div class="project-modal-background"></div>
@@ -68,22 +72,24 @@ layout: default
       <div class="section-header-underline"></div>
     </h2>
     <div class="home-section-body home-section-who-we-are">
-      {{ site.sections | where_exp: "s", "s.name == 'about'" }}
+      <div class="home-section-body-inner">
+        {{ site.sections | where_exp: "s", "s.name == 'about'" }}
 
-      <ul class="about-bios">
-        {% assign bios = (site.bios | sort: 'order') %}
-        {% for bio in bios %}
-          <li class="about-bio">
-            <div class="about-bio-image">
-              <img src="{{ bio.image | prepend: '/assets/' | relative_url }}"/>
-            </div>
-            <div class="about-bio-text">
-              {{ bio.content }}
-            </div>
-            <div style="clear: both;"></div>
-          </li>
-        {% endfor %}
-      </ul>
+        <ul class="about-bios">
+          {% assign bios = (site.bios | sort: 'order') %}
+          {% for bio in bios %}
+            <li class="about-bio">
+              <div class="about-bio-image">
+                <img src="{{ bio.image | prepend: '/assets/' | relative_url }}"/>
+              </div>
+              <div class="about-bio-text">
+                {{ bio.content }}
+              </div>
+              <div style="clear: both;"></div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -93,25 +99,27 @@ layout: default
       <div class="section-header-underline"></div>
     </h2>
     <div class="home-section-body home-section-who-we-work-with">
-      {{ site.sections | where_exp: "s", "s.name == 'clients'" }}
+      <div class="home-section-body-inner">
+        {{ site.sections | where_exp: "s", "s.name == 'clients'" }}
 
-      <ul class="clients-testimonials">
-        {% assign testimonials = (site.testimonials | sort: 'order') %}
-        {% for testimonial in testimonials %}
-          <li class="clients-testimonial">
-            <div class="clients-testimonial-image">
-              <img src="{{ testimonial.image }}"/>
-            </div>
-            <div class="client-testimonial-text">
-              {{ testimonial.content }}
-            </div>
-            <div class="client-testimonial-text">
-              &mdash;{{ testimonial.name }}{% if testimonial.jobtitle %}, {{ testimonial.jobtitle }}{% endif %}
-            </div>
-            <div style="clear: both;"></div>
-          </li>
-        {% endfor %}
-      </ul>
+        <ul class="clients-testimonials">
+          {% assign testimonials = (site.testimonials | sort: 'order') %}
+          {% for testimonial in testimonials %}
+            <li class="clients-testimonial">
+              <div class="clients-testimonial-image">
+                <img src="{{ testimonial.image }}"/>
+              </div>
+              <div class="client-testimonial-text">
+                {{ testimonial.content }}
+              </div>
+              <div class="client-testimonial-text">
+                &mdash;{{ testimonial.name }}{% if testimonial.jobtitle %}, {{ testimonial.jobtitle }}{% endif %}
+              </div>
+              <div style="clear: both;"></div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </section>
 
