@@ -2080,7 +2080,7 @@ function goToSlide(index) {
 }
 
 function selectLogoColor() {
-  var colors = ['blue', 'green', 'grey', 'orange', 'red', 'yellow'];
+  var colors = ['blue', 'green', 'grey', 'orange', 'red', 'yellow','pink'];
   var index = Math.floor(Math.random() * colors.length);
   (0, _d3Selection.select)('.site-logo').classed(colors[index], true);
 }
