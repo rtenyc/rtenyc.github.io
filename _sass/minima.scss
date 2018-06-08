@@ -146,6 +146,9 @@ a, a:link, a:visited {
   &.yellow {
     background-image: url('img/logo-yellow.svg');
   }
+   &.pink {
+    background-image: url('img/logo-pink.svg');
+  }
 }
 
 .main-menu {
@@ -230,7 +233,7 @@ a, a:link, a:visited {
     padding-top: 50px;
 
     &-inner {
-      max-width: 800px;
+      max-width: 750px;
     }
   }
 
@@ -512,7 +515,7 @@ a, a:link, a:visited {
     left: -100px;
     margin-top: 17px;
     position: absolute;
-    transition: left 10s;
+    transition: left 14s;
     transition-delay: 1.5s;
     transition-timing-function: ease-in-out;
   }
