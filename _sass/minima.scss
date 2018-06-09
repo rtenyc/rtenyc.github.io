@@ -18,7 +18,7 @@ $brand-color:      #2a7ae2 !default;
 
 $grey-color:       #3D4752 !default;
 $grey-color-light: #CCCED1 !default;
-$grey-color-lighter: #EEE !default;
+$grey-color-lighter: #E8EAEB !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
 $blue-color: #00B6FF;
@@ -353,8 +353,8 @@ a, a:link, a:visited {
   .clients-testimonial {
     background: $grey-color-lighter;
     list-style: none;
-    margin-top: 1rem;
-    padding: .5rem;
+    margin-top: 2rem;
+    padding: 2rem 3rem 2rem 2rem;
 
     &:first-of-type {
       margin-top: 0;
@@ -362,6 +362,9 @@ a, a:link, a:visited {
 
     &-image {
       float: left;
+      width: 150px;
+      padding-right: 3rem;
+      padding-bottom: 2rem;
     }
 
     &-text {
@@ -380,14 +383,14 @@ a, a:link, a:visited {
     background-size: cover;
     display: inline-block;
     float: left;
-    height: 250px;
-    margin-bottom: 3%;
+    height: 200px;
+    margin-bottom: 5%;
     margin-right: 3%;
     position: relative;
     width: 100%;
 
     &-cover {
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.6);
       bottom: 0;
       cursor: pointer;
       display: none;
@@ -400,7 +403,7 @@ a, a:link, a:visited {
 
       &-text {
         color: white;
-        font-weight: bold;
+        font-weight: regular;
         font-size: 22px;
         text-align: center;
       }
@@ -520,3 +523,13 @@ a, a:link, a:visited {
     transition-timing-function: ease-in-out;
   }
 }
+
+  .project-modal-next, .project-modal-previous {
+  color: $grey-color;
+}
+
+  .project-modal-close {
+    border: 2px;
+    font-weight: bold;
+ }
+
