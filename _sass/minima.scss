@@ -146,7 +146,7 @@ a, a:link, a:visited {
   &.yellow {
     background-image: url('img/logo-yellow.svg');
   }
-   &.pink {
+  &.pink {
     background-image: url('img/logo-pink.svg');
   }
 }
@@ -243,9 +243,9 @@ a, a:link, a:visited {
     padding-top: 150px;
   }
 
-    .home-section-top p {
+  .home-section-top p:first-of-type {
     padding-top: 20px;
-    }
+  }
 
 
   .home-section-projects {
@@ -527,10 +527,11 @@ a, a:link, a:visited {
   }
 }
 
-  .project-modal-next, .project-modal-previous {
+.project-modal-next, .project-modal-previous {
   color: $grey-color;
 }
 
+<<<<<<< HEAD
   .project-modal-contents-slide-content p {
    overflow: scroll;
 }
@@ -539,11 +540,17 @@ a, a:link, a:visited {
     border: 2px;
     font-weight: bold;
  }
+=======
+.project-modal-close {
+  border: 2px;
+  font-weight: bold;
+}
+>>>>>>> af958f0be0cdfbb341cd3ba8ce6e92677cad2f4b
 
 .bottom-footer {
-	background-color: #293039;
-	color: #D9D2D2;
-	font-size: 12px;
-	text-align: center;
-	padding: 30px 60px 30px 60px;
+  background-color: #293039;
+  color: #D9D2D2;
+  font-size: 12px;
+  text-align: center;
+  padding: 30px 60px 30px 60px;
 }
