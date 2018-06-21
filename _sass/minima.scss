@@ -215,6 +215,7 @@ a, a:link, a:visited {
     .section-header-text {
       margin-left: 25%;
     }
+
   }
 
   .section-header-underline {
@@ -350,6 +351,11 @@ a, a:link, a:visited {
 .clients-testimonials {
   margin: 0;
 
+  .client-testimonial-text {
+  float: right;
+  width: 75%;
+  }
+
   .clients-testimonial {
     background: $grey-color-lighter;
     list-style: none;
@@ -362,13 +368,9 @@ a, a:link, a:visited {
 
     &-image {
       float: left;
-      width: 150px;
+      width: 25%;
       padding-right: 3rem;
       padding-bottom: 2rem;
-    }
-
-    &-text {
-      float: left;
     }
   }
 }
@@ -508,6 +510,7 @@ a, a:link, a:visited {
 
     .project-modal-contents {
       display: block;
+      overflow: scroll;
     }
   }
 }
@@ -526,6 +529,10 @@ a, a:link, a:visited {
 
   .project-modal-next, .project-modal-previous {
   color: $grey-color;
+}
+
+  .project-modal-contents-slide-content p {
+   overflow: scroll;
 }
 
   .project-modal-close {
