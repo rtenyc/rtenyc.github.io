@@ -2093,6 +2093,11 @@ function initialize() {
   selectLogoColor();
   initializeAnimation();
 
+  (0, _d3Selection.selectAll)('.next-section-button').on('click', function () {
+    _d3Selection.event.preventDefault();
+    scrollToSection('projects');
+  });
+
   (0, _d3Selection.selectAll)('.main-menu-link').on('click', function (d, i, nodes) {
     _d3Selection.event.preventDefault();
     scrollToSection(nodes[i].dataset.section);

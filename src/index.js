@@ -111,6 +111,11 @@ function initialize() {
   selectLogoColor();
   initializeAnimation();
 
+  selectAll('.next-section-button').on('click', () => {
+    currentEvent.preventDefault();
+    scrollToSection('projects');
+  });
+
   selectAll('.main-menu-link').on('click', (d, i, nodes) => {
     currentEvent.preventDefault();
     scrollToSection(nodes[i].dataset.section);

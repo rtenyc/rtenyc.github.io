@@ -239,6 +239,15 @@ a, a:link, a:visited {
     .home-section-body {
       padding-top: 150px;
     }
+
+    .next-section-button {
+      bottom: 15px;
+      display: inline-block;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 80px;
+    }
   }
 
   .home-section-top p:first-of-type {
@@ -674,6 +683,10 @@ a, a:link, a:visited {
       padding-top: 2rem;
       padding-right: 1rem;
       margin-left: 1rem;
+
+      .next-section-button {
+        display: none;
+      }
     }
 
     h2 {

@@ -11,6 +11,9 @@ layout: default
         <div>
           {{ site.sections | where_exp: "s", "s.name == 'home'" }}
         </div>
+        <a href="#" class="next-section-button">
+          <img src="{{ '/assets/img/down-arrow.svg' | relative_url }}" />
+        </a>
       </div>
     </div>
   </section>
