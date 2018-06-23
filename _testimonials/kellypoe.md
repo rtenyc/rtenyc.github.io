@@ -1,7 +1,7 @@
 ---
 name: <strong>Kelly Callahan-Poe</strong>
 jobtitle: President at Williams Whittle Advertising 
-order: 2
+order: 4
 image: /assets/img/testimonials/kelly.png
 ---
 

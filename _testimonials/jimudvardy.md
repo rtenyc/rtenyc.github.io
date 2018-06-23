@@ -1,7 +1,7 @@
 ---
 name: <strong>James Udvardy</strong>
 jobtitle: Project Director, South Florida Commuter Services
-order: 4
+order: 3
 image: /assets/img/testimonials/jim.png
 ---
 

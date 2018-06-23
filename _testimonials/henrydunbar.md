@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 2
 name: <strong>Henry Dubar</strong>
 jobtitle: Director of Active Transportation  Arlington County Commuter Services
 image: /assets/img/testimonials/henry.png
