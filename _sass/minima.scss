@@ -35,14 +35,6 @@ $red-rail-color: #F42503;
 $orange-rail-color: #F97F06;
 $blue-rail-color: #135BBC;
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
-
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;
@@ -63,6 +55,7 @@ $home-section-header-height: 44px;
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {
@@ -71,7 +64,7 @@ html {
 
 body {
   color: $grey-color;
-  overflow-x: hidden;
+  overflow: hidden;
 
   &.modal-open {
     overflow-y: hidden;
@@ -487,6 +480,10 @@ a, a:link, a:visited {
     padding: 0;
     position: absolute;
     transform: translateY(-50%);
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &-previous {
@@ -547,4 +544,132 @@ a, a:link, a:visited {
   font-size: 12px;
   text-align: center;
   padding: 30px 60px 30px 60px;
+}
+
+@include media-query($on-palm) {
+  .site-header {
+    .site-header-wrapper {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
+
+    .site-logo, .site-header-content, .site-header-sub {
+      margin-left: 0;
+    }
+  }
+
+  .main-menu {
+    left: calc(100% - 1rem);
+  }
+
+  .home-section-body {
+    padding-right: 0;
+  }
+
+  .home-section {
+    margin-right: 1rem;
+
+    .home-section-top {
+      padding-top: 2rem;
+      padding-right: 1rem;
+      margin-left: 1rem;
+    }
+
+    h2 {
+      .section-header-text {
+        margin-left: 1rem;
+      }
+    }
+
+    .home-section-body {
+      margin-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .about-bios {
+    .about-bio-image {
+      float: none;
+      margin-left: 10%;
+      width: 80%;
+    }
+
+    .about-bio-text {
+      float: none;
+      padding-left: 0;
+      padding-top: 1rem;
+      width: 100%;
+    }
+  }
+
+  .project-modal {
+    .project-modal-inner {
+      bottom: 3rem;
+      height: auto;
+      left: 1rem;
+      right: 1rem;
+      top: 3rem;
+      width: auto;
+    }
+
+    .project-modal-contents-slide-img {
+      background-position: center;
+      background-size: contain;
+      float: none;
+      height: 33%;
+      width: 100%;
+    }
+
+    .project-modal-contents-slide-right {
+      float: none;
+      height: 67%;
+      overflow-y: auto;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .project-modal-previous {
+      left: -20px;
+    }
+    .project-modal-next {
+      right: -20px;
+    }
+  }
+
+  .clients-testimonials {
+    .clients-testimonial {
+      padding-right: 2rem;
+    }
+
+    .clients-testimonial-image {
+      float: none;
+      display: block;
+      padding-right: 0;
+      width: 100%;
+
+      img {
+        margin-left: 10%;
+        width: 80%;
+      }
+    }
+  }
+
+  .site-footer {
+    margin-right: 0;
+    padding-right: 1rem;
+
+    .footer-wrapper {
+      margin-right: 0;
+    }
+
+    .footer-social-list li {
+      display: block;
+      float: none;
+      margin-left: 0;
+    }
+
+    .bottom-footer {
+      margin-right: -1rem;
+    }
+  }
 }
