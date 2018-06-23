@@ -89,6 +89,7 @@ a, a:link, a:visited {
 .site-header {
   border-top: none;
   padding-bottom: $home-section-header-height;
+  padding-top: 40px;
 
   .site-header-wrapper {
     margin-right: calc(15% + 30px);
@@ -96,7 +97,6 @@ a, a:link, a:visited {
 
   .site-header-content {
     margin-left: 15%;
-    margin-top: 40px;
   }
 
   .site-header-sub {
