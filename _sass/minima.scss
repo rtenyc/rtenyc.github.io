@@ -580,6 +580,10 @@ a, a:link, a:visited {
       display: none;
     }
 
+    a {
+      padding: 7px 0;
+    }
+
     &.open {
       border-bottom: 1px solid $grey-color-light;
       border-left: 1px solid $grey-color-light;
