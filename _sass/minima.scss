@@ -15,6 +15,7 @@ $spacing-unit: 30px !default;
 $text-color: #111 !default;
 $background-color: #fdfdfd !default;
 $brand-color: #2a7ae2 !default;
+$body-background-color: #F8F8F8;
 
 $grey-color: #3D4752 !default;
 $grey-color-light: #CCCED1 !default;
@@ -83,7 +84,7 @@ a, a:link, a:visited {
 
 .page-content {
   padding: 0;
-  background-color: #F8F8F8;
+  background-color: $body-background-color;
 }
 
 .site-header {
@@ -566,7 +567,54 @@ a, a:link, a:visited {
   }
 
   .main-menu {
-    left: calc(100% - 1rem);
+    background: $body-background-color;
+    height: 0;
+    left: inherit;
+    padding-left: .5rem;
+    right: calc(1rem + 8px);
+    z-index: 500;
+
+    ul {
+      margin-bottom: 0;
+      margin-left: 0;
+      display: none;
+    }
+
+    &.open {
+      border-bottom: 1px solid $grey-color-light;
+      border-left: 1px solid $grey-color-light;
+      border-top: 1px solid $grey-color-light;
+      height: auto;
+
+      ul {
+        display: inline-block;
+      }
+    }
+
+    .main-menu-link.active:before {
+      display: none;
+    }
+    
+    .main-menu-link.dark-background {
+      color: $grey-color;
+    }
+
+    &:after {
+      content: "";
+      background: white;
+      border: 3px solid black;
+      border-radius: 50%;
+      box-sizing: content-box;
+      display: inline-block;
+      float: right;
+      height: 10px;
+      margin-right: -12px;
+      margin-top: 4px;
+      width: 10px;
+    }
+    &.open:after {
+      margin-top: 3px;
+    }
   }
 
   .home-section-body {

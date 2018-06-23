@@ -133,6 +133,30 @@ function initialize() {
 
   updateNavPosition();
   window.onscroll = throttle(updateNavPosition, 300);
+
+  if (window.innerWidth <= 600) {
+    initializeMobile();
+  }
+}
+
+function initializeMobileNav() {
+  // Toggle main menu on click
+  const mainMenu = select('.main-menu');
+  mainMenu.on('click', () => {
+    currentEvent.preventDefault();
+    mainMenu.classed('open', !mainMenu.classed('open'));
+  });
+
+  // Hide main menu on click in body
+  select('body').on('click', () => {
+    if (!mainMenu.node().contains(currentEvent.target)) {
+      mainMenu.classed('open', false);
+    }
+  });
+}
+
+function initializeMobile() {
+  initializeMobileNav();
 }
 
 if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading'){

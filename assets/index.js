@@ -2115,6 +2115,30 @@ function initialize() {
 
   updateNavPosition();
   window.onscroll = (0, _lodash2.default)(updateNavPosition, 300);
+
+  if (window.innerWidth <= 600) {
+    initializeMobile();
+  }
+}
+
+function initializeMobileNav() {
+  // Toggle main menu on click
+  var mainMenu = (0, _d3Selection.select)('.main-menu');
+  mainMenu.on('click', function () {
+    _d3Selection.event.preventDefault();
+    mainMenu.classed('open', !mainMenu.classed('open'));
+  });
+
+  // Hide main menu on click in body
+  (0, _d3Selection.select)('body').on('click', function () {
+    if (!mainMenu.node().contains(_d3Selection.event.target)) {
+      mainMenu.classed('open', false);
+    }
+  });
+}
+
+function initializeMobile() {
+  initializeMobileNav();
 }
 
 if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') {
