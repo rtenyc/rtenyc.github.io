@@ -2011,11 +2011,11 @@ function scrollToSection(sectionName) {
 }
 
 function closestSection() {
-  var scrollTop = document.scrollingElement.scrollTop;
+  var scrollTop = document.scrollingElement.scrollTop + window.innerHeight * 0.5;
   var closest = void 0;
   (0, _d3Selection.selectAll)('.home-section').each(function (d, i, nodes) {
     var section = nodes[i];
-    if (!closest || section.offsetTop - 150 < scrollTop) {
+    if (!closest || section.offsetTop < scrollTop) {
       closest = section;
     }
   });
@@ -2080,7 +2080,7 @@ function goToSlide(index) {
 }
 
 function selectLogoColor() {
-  var colors = ['blue', 'green', 'grey', 'orange', 'red', 'yellow','pink'];
+  var colors = ['blue', 'green', 'grey', 'orange', 'red', 'yellow'];
   var index = Math.floor(Math.random() * colors.length);
   (0, _d3Selection.select)('.site-logo').classed(colors[index], true);
 }

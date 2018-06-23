@@ -22,11 +22,11 @@ function scrollToSection(sectionName) {
 }
 
 function closestSection() {
-  const scrollTop = document.scrollingElement.scrollTop;
+  const scrollTop = document.scrollingElement.scrollTop + window.innerHeight * 0.5;
   let closest;
   selectAll('.home-section').each((d, i, nodes) => {
     const section = nodes[i];
-    if (!closest || section.offsetTop - 150 < scrollTop) {
+    if (!closest || section.offsetTop < scrollTop) {
       closest = section;
     }
   });

@@ -190,7 +190,7 @@ a, a:link, a:visited {
 }
 
 .home-section {
-  margin-top: -$home-section-header-height;
+  border-right: 8px solid;
   margin-right: calc(15% + 30px);
 
   &:first-of-type {
@@ -207,6 +207,7 @@ a, a:link, a:visited {
 
     .section-header-text {
       margin-left: 25%;
+      margin-top: 2rem;
     }
 
   }
@@ -218,7 +219,6 @@ a, a:link, a:visited {
   }
 
   .home-section-body {
-    border-right: 8px solid;
     min-height: 95vh;
     margin-left: 25%;
     margin-top: -1px;
@@ -231,9 +231,12 @@ a, a:link, a:visited {
     }
   }
 
-  .home-section-top {
+  &#home {
     border-right-color: $dark-green-rail-color;
-    padding-top: 150px;
+
+    .home-section-body {
+      padding-top: 150px;
+    }
   }
 
   .home-section-top p:first-of-type {
@@ -241,22 +244,26 @@ a, a:link, a:visited {
   }
 
 
-  .home-section-projects {
+  &#projects {
     border-right-color: $yellow-rail-color;
   }
 
-  .home-section-who-we-are {
+  &#about {
     border-right-color: $orange-rail-color;
   }
 
-  .home-section-who-we-work-with {
+  &#clients {
     border-right-color: $blue-rail-color;
   }
 
-  .home-section-contact {
-    border-right-color: $red-rail-color;
+  &#contact {
+    border: none;
     padding-bottom: 0;
     padding-top: 0;
+
+    .home-section-contact {
+      border-right: 8px solid $red-rail-color;
+    }
   }
 }
 
@@ -264,7 +271,7 @@ a, a:link, a:visited {
   background-color: #3D4752;
   border-top: 0;
   color: white;
-  height: 95vh;
+  min-height: 95vh;
   margin-right: 0;
   padding-bottom: 0;
   padding-top: 0;
@@ -569,7 +576,7 @@ a, a:link, a:visited {
   .home-section {
     margin-right: 1rem;
 
-    .home-section-top {
+    &#home .home-section-top {
       padding-top: 2rem;
       padding-right: 1rem;
       margin-left: 1rem;
@@ -657,6 +664,10 @@ a, a:link, a:visited {
   .site-footer {
     margin-right: 0;
     padding-right: 1rem;
+
+    .footer-content {
+      padding-top: 4rem;
+    }
 
     .footer-wrapper {
       margin-right: 0;
