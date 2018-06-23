@@ -294,11 +294,20 @@ a, a:link, a:visited {
     background: $blue-color;
     border: 0;
     color: white;
+    display: inline-block;
     font-weight: bold;
     padding: 15px 30px;
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 16px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &, &:link, &:visited {
+      color: white;
+    }
   }
 
   .footer-email-text {
