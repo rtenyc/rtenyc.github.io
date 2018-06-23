@@ -51,7 +51,7 @@ var currentSlide;
 var slideCount;
 
 function openModal(project) {
-  select('body').classed('modal-open', true);
+  select('html').classed('modal-open', true);
   select('.project-modal')
     .classed('open', true)
     .style('top', `${window.scrollY}px`);
@@ -69,7 +69,7 @@ function openModal(project) {
 }
 
 function closeModal() {
-  select('body').classed('modal-open', false);
+  select('html').classed('modal-open', false);
   select('.project-modal')
     .classed('open', false);
 

@@ -2039,7 +2039,7 @@ var currentSlide;
 var slideCount;
 
 function openModal(project) {
-  (0, _d3Selection.select)('body').classed('modal-open', true);
+  (0, _d3Selection.select)('html').classed('modal-open', true);
   (0, _d3Selection.select)('.project-modal').classed('open', true).style('top', window.scrollY + 'px');
   (0, _d3Selection.select)('.project-modal-inner').append(function () {
     return project.select('.project-modal-contents').node().cloneNode(true);
@@ -2054,7 +2054,7 @@ function openModal(project) {
 }
 
 function closeModal() {
-  (0, _d3Selection.select)('body').classed('modal-open', false);
+  (0, _d3Selection.select)('html').classed('modal-open', false);
   (0, _d3Selection.select)('.project-modal').classed('open', false);
 
   (0, _d3Selection.select)('.project-modal-inner .project-modal-contents').remove();

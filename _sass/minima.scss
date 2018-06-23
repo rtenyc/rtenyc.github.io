@@ -58,6 +58,10 @@ $home-section-header-height: 44px;
 html {
   box-sizing: border-box;
   overflow-x: hidden;
+
+  &.modal-open {
+    overflow-y: hidden;
+  }
 }
 
 *, *:before, *:after {
@@ -67,10 +71,6 @@ html {
 body {
   color: $grey-color;
   overflow: hidden;
-
-  &.modal-open {
-    overflow-y: hidden;
-  }
 }
 
 a, a:link, a:visited {
