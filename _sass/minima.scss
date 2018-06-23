@@ -28,6 +28,7 @@ $blue-color: #00B6FF;
 $content-width: 800px !default;
 
 $on-palm: 600px !default;
+$on-tablet: 800px !default;
 $on-laptop: 800px !default;
 
 $dark-green-rail-color: #629B21;
@@ -734,5 +735,20 @@ a, a:link, a:visited {
     .bottom-footer {
       margin-right: -1rem;
     }
+  }
+}
+
+@include media-query($on-tablet) {
+  .home-section .home-section-body {
+    margin-left: 15%;
+    padding-right: 6rem;
+  }
+
+  .home-section h2 .section-header-text {
+    margin-left: 15%;
+  }
+
+  .clients-testimonials .clients-testimonial-image {
+    padding-right: 2rem;
   }
 }
