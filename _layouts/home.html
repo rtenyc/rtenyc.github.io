@@ -105,7 +105,7 @@ layout: default
     <div class="home-section-body home-section-who-we-work-with">
       <div class="home-section-body-inner">
         {{ site.sections | where_exp: "s", "s.name == 'clients'" }}
-
+        <img class="client-logos" src="/assets/img/testimonials/logos.png"></img>
         <ul class="clients-testimonials">
           {% assign testimonials = (site.testimonials | sort: 'order') %}
           {% for testimonial in testimonials %}
