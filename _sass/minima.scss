@@ -485,6 +485,7 @@ a, a:link, a:visited {
   &-previous {
     background: none;
     border: none;
+    cursor: pointer;
     font-size: 40px;
     padding: 0;
     position: absolute;
@@ -496,12 +497,12 @@ a, a:link, a:visited {
   }
 
   &-previous {
-    left: 0;
+    left: -10px;
     top: 50%;
   }
 
   &-next {
-    right: 0;
+    right: -10px;
     top: 50%;
   }
 
