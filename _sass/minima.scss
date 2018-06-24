@@ -720,11 +720,20 @@ a, a:link, a:visited {
       }
     }
 
+    p .body { 
+        {
+          font-size:15px;
+        }
+      }
+      
     h2 {
       .section-header-text {
         margin-left: 1rem;
         margin-top: 2rem;
         line-height: 1.2;
+        font-size: 26px;
+        font-weight: bold;
+        line-height: 1.15;
       }
     }
 
