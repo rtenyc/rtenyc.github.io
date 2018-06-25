@@ -249,9 +249,9 @@ a, a:link, a:visited {
       position: relative;
       transform: translateX(-50%);
       width: 50px;
-      &:hover {
-          filter: invert(0.05);
 
+      &:hover {
+        filter: invert(0.05);
       }
     }
   }
