@@ -2085,14 +2085,19 @@ function selectLogoColor() {
   (0, _d3Selection.select)('.site-logo').classed(colors[index], true);
 }
 
-function initializeAnimation() {
+function initializeHeaderAnimation() {
   var animationImages = (0, _d3Selection.selectAll)('.animation img').nodes();
   (0, _d3Selection.select)(animationImages[Math.floor(Math.random() * animationImages.length)]).style('display', 'block').style('left', document.body.offsetWidth + 'px');
 }
 
+function initializeFooterAnimation() {
+  (0, _d3Selection.select)('.animation-footer img').style('left', document.body.offsetWidth + 'px');
+}
+
 function initialize() {
   selectLogoColor();
-  initializeAnimation();
+  initializeHeaderAnimation();
+  initializeFooterAnimation();
 
   (0, _d3Selection.selectAll)('.next-section-button').on('click', function () {
     _d3Selection.event.preventDefault();

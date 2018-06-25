@@ -102,16 +102,22 @@ function selectLogoColor() {
     .classed(colors[index], true);
 }
 
-function initializeAnimation() {
+function initializeHeaderAnimation() {
   const animationImages = selectAll('.animation img').nodes();
   select(animationImages[Math.floor(Math.random() * animationImages.length)])
     .style('display', 'block')
     .style('left', `${document.body.offsetWidth}px`);
 }
 
+function initializeFooterAnimation() {
+  select('.animation-footer img')
+    .style('left', `${document.body.offsetWidth}px`);
+}
+
 function initialize() {
   selectLogoColor();
-  initializeAnimation();
+  initializeHeaderAnimation();
+  initializeFooterAnimation();
 
   selectAll('.next-section-button').on('click', () => {
     currentEvent.preventDefault();

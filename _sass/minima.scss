@@ -563,11 +563,12 @@ a, a:link, a:visited {
     transition-timing-function: ease-in-out;
   }
 }
-.animation_footer {
+
+.animation-footer {
   img {
     height: 30px;
-    left: -100px;
-    margin-top: 180px;
+    left: -250px;
+    margin-top: -28px;
     position: absolute;
     transition: left 14s;
     transition-delay: 1.2s;
@@ -748,27 +749,28 @@ a, a:link, a:visited {
   }
 
   .animation {
-  img {
-    height: 30px;
-    left: -100px;
-    margin-top: 17px;
-    position: absolute;
-    transition: left 7s;
-    transition-delay: 1.25s;
-    transition-timing-function: ease-in-out;
+    img {
+      height: 30px;
+      left: -100px;
+      margin-top: 17px;
+      position: absolute;
+      transition: left 7s;
+      transition-delay: 1.25s;
+      transition-timing-function: ease-in-out;
+    }
   }
-}
-.animation_footer {
-  img {
-    height: 30px;
-    left: -100px;
-    margin-top: 17px;
-    position: absolute;
-    transition: left 7s;
-    transition-delay: 1.1s;
-    transition-timing-function: ease-in-out;
+
+  .animation-footer {
+    img {
+      height: 30px;
+      left: -250px;
+      margin-top: -28px;
+      position: absolute;
+      transition: left 7s;
+      transition-delay: 1.1s;
+      transition-timing-function: ease-in-out;
+    }
   }
-}
 
   .project-modal {
     .project-modal-inner {
