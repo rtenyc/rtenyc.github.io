@@ -16,8 +16,9 @@
 title: Route
 email: info@route.nyc
 description: >- # this means to ignore newlines until "baseurl:"
-Route is a team of designers, developers, and cartographers who are dedicated to improving mobility. 
-We use our combined expertise to give cities adaptable tools to set residents and visitors in motion.
+  Route is a team of designers, developers, and cartographers who are dedicated to improving 
+  mobility. We use our combined expertise to give cities adaptable tools to set residents and 
+  visitors in motion.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
