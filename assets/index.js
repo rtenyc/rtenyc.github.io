@@ -2022,6 +2022,16 @@ function closestSection() {
   return closest;
 }
 
+function handleScroll() {
+  updateNavPosition();
+
+  var visibleHeight = document.scrollingElement.scrollTop + window.innerHeight;
+  var animationHeight = (0, _d3Selection.select)('.animation-footer').node().offsetTop;
+  if (visibleHeight >= animationHeight) {
+    initializeFooterAnimation();
+  }
+}
+
 function updateNavPosition() {
   var section = closestSection().id;
   (0, _d3Selection.selectAll)('.main-menu a').classed('active', false);
@@ -2097,7 +2107,6 @@ function initializeFooterAnimation() {
 function initialize() {
   selectLogoColor();
   initializeHeaderAnimation();
-  initializeFooterAnimation();
 
   (0, _d3Selection.selectAll)('.next-section-button').on('click', function () {
     _d3Selection.event.preventDefault();
@@ -2124,8 +2133,8 @@ function initialize() {
   (0, _d3Selection.select)('.project-modal-previous').on('click', previousProjectSlide);
   (0, _d3Selection.select)('.project-modal-next').on('click', advanceProjectSlide);
 
-  updateNavPosition();
-  window.onscroll = (0, _lodash2.default)(updateNavPosition, 300);
+  handleScroll();
+  window.onscroll = (0, _lodash2.default)(handleScroll, 300);
 
   if (window.innerWidth <= 600) {
     initializeMobile();

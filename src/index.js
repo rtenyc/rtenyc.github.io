@@ -33,6 +33,16 @@ function closestSection() {
   return closest;
 }
 
+function handleScroll() {
+  updateNavPosition();
+
+  const visibleHeight = document.scrollingElement.scrollTop + window.innerHeight;
+  const animationHeight = select('.animation-footer').node().offsetTop;
+  if (visibleHeight >= animationHeight) {
+    initializeFooterAnimation();
+  }
+}
+
 function updateNavPosition() {
   const section = closestSection().id;
   selectAll('.main-menu a').classed('active', false);
@@ -117,7 +127,6 @@ function initializeFooterAnimation() {
 function initialize() {
   selectLogoColor();
   initializeHeaderAnimation();
-  initializeFooterAnimation();
 
   selectAll('.next-section-button').on('click', () => {
     currentEvent.preventDefault();
@@ -144,8 +153,8 @@ function initialize() {
   select('.project-modal-previous').on('click', previousProjectSlide);
   select('.project-modal-next').on('click', advanceProjectSlide);
 
-  updateNavPosition();
-  window.onscroll = throttle(updateNavPosition, 300);
+  handleScroll();
+  window.onscroll = throttle(handleScroll, 300);
 
   if (window.innerWidth <= 600) {
     initializeMobile();
