@@ -2086,7 +2086,8 @@ function selectLogoColor() {
 }
 
 function initializeAnimation() {
-  (0, _d3Selection.select)('.animation img').style('left', document.body.offsetWidth + 'px');
+  var animationImages = (0, _d3Selection.selectAll)('.animation img').nodes();
+  (0, _d3Selection.select)(animationImages[Math.floor(Math.random() * animationImages.length)]).style('display', 'block').style('left', document.body.offsetWidth + 'px');
 }
 
 function initialize() {

@@ -551,18 +551,9 @@ a, a:link, a:visited {
   }
 }
 
-
-  &.bike {
-    background-image: url('img/cyclist-with-kid.svg');
-  }
-    &.ferry {
-    background-image: url('img/ferry.svg');
-  }
-
-
-
 .animation {
   img {
+    display: none;
     height: 30px;
     left: -100px;
     margin-top: 17px;
@@ -721,10 +712,8 @@ a, a:link, a:visited {
     }
 
     p .body { 
-        {
-          font-size:15px;
-        }
-      }
+      font-size:15px;
+    }
       
     h2 {
       .section-header-text {

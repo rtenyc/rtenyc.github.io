@@ -103,7 +103,9 @@ function selectLogoColor() {
 }
 
 function initializeAnimation() {
-  select('.animation img')
+  const animationImages = selectAll('.animation img').nodes();
+  select(animationImages[Math.floor(Math.random() * animationImages.length)])
+    .style('display', 'block')
     .style('left', `${document.body.offsetWidth}px`);
 }
 
