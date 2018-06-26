@@ -569,10 +569,15 @@ a, a:link, a:visited {
 }
 
 .animation-footer {
+  height: 30px;
+  margin-top: -30px;
+  overflow: hidden;
+  position: relative;
+  width: calc(100% + 3rem);
+
   img {
     height: 30px;
     left: -250px;
-    margin-top: -28px;
     position: absolute;
     transition: left 14s;
     transition-timing-function: ease-in-out;
@@ -765,12 +770,7 @@ a, a:link, a:visited {
 
   .animation-footer {
     img {
-      height: 30px;
-      left: -250px;
-      margin-top: -28px;
-      position: absolute;
       transition: left 7s;
-      transition-timing-function: ease-in-out;
     }
   }
 
