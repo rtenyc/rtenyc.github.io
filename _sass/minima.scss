@@ -77,6 +77,11 @@ a, a:link, a:visited {
   color: $grey-color;
 }
 
+.home-section-body-inner a {
+    background-color: rgba(235, 199, 72, 0.2);
+    text-decoratiboldon: none;
+}
+
 .wrapper {
   margin-left: 15%;
   margin-right: 15%;
