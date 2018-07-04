@@ -77,7 +77,11 @@ a, a:link, a:visited {
   color: $grey-color;
 }
 
-.home-section-body-inner a {
+.next-section-button a {
+    background-color:#F8F8F8;
+    }
+
+.about-bio-text a {
     background-color: rgba(235, 199, 72, 0.2);
     text-decoratiboldon: none;
 }
